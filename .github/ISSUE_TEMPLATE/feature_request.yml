@@ -1,0 +1,33 @@
+name: Theological Dispute (Lore/Feature Request)
+description: Propose changes to the internal laws of the Earth-Bones.
+title: "[SERMON]: "
+labels: ["tribunal-review"]
+assignees: ["pascal_the_dog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🔱 TO THE THREE LORDS, ONE TRUE FAITH
+  - type: textarea
+    id: revelation
+    attributes:
+      label: 1. The Revelation
+      description: What new phrase or prose sequence do you propose adding to the lexer?
+      placeholder: "e.g., 'The Nerevarine cast out the courier from the House'"
+    validations:
+      required: true
+  - type: textarea
+    id: metaphysical-impact
+    attributes:
+      label: 2. The Metaphysical Impact
+      description: How does this change alter the balance of the prose? Will it cause the Tribunal to crash from over-devotion, or will it cause their local inodes to collapse from spiritual neglect?
+    validations:
+      required: true
+  - type: input
+    id: ending-of-words
+    attributes:
+      label: 3. The Ending of the Words
+      description: State the canonical pass-phrase required to close this dispute. (Hint: It is seven letters long and starts with A).
+      placeholder: "Enter the sacred script closure..."
+    validations:
+      required: true

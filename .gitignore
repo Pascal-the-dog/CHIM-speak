@@ -1,0 +1,23 @@
+# ===========================================================
+# CHIM-speak: The Void Protocol (.gitignore)
+# ===========================================================
+
+# 1. Rust Build Artifacts (Crucial)
+
+/target/
+
+# 2. Local Configuration & Locks
+**/*.rs.bk
+Cargo.lock
+
+# 3. Text Editor Trash & Local Interfacing Metadata
+.kateproject
+.kateproject.lock
+*~
+.*.swp
+.directory
+
+# 4. Local Testing Files
+*.chim
+!fizzbuzz.chim
+/target

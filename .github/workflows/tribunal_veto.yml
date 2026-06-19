@@ -1,0 +1,30 @@
+name: The Tribunal's Eternal Veto
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  ego_check:
+    name: "⚖️ The Scribe's Ego-Check"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Evaluate Petitioner Identity
+        env:
+          PR_ACTOR: ${{ github.actor }}
+        run: |
+          echo "==========================================================="
+          echo "           THE HEART CHAMBER IS CLOSED TO OUTLANDERS        "
+          echo "==========================================================="
+          echo "Petitioner tracking signature: $PR_ACTOR"
+          
+          if [ "$PR_ACTOR" = "pascal_the_dog" ]; then
+            echo "The Creator has stepped forward. The Earth-Bones yield."
+            exit 0
+          else
+            echo "HERESY DETECTED!"
+            echo "What a fool you are to a god. How can you compile a god?"
+            echo "Shame on you, sweet Outlander. Your code has Zero-Summed."
+            echo "==========================================================="
+            exit 1
+          fi

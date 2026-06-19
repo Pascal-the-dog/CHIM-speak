@@ -1,0 +1,56 @@
+name: "🛑 Report a Failed Ego-Check (Heresy Report)"
+description: Use this template if your file has vanished into the void and you want to be immortalized on the Wall of Shame.
+title: "[HERESY] I have failed the Wheel"
+labels: ["zero-summed", "divine-wrath"]
+assignees: ["pascal_the_dog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🕯️ The Outlander's Confession
+  - type: input
+    id: file-name
+    attributes:
+      label: What was the name of the mortal file that realized the fictional nature of its own existence?
+      placeholder: "e.g., src/main.chim, my_production_database.chim"
+    validations:
+      required: true
+  - type: textarea
+    id: heresy-typo
+    attributes:
+      label: What was the exact heresy/typo that triggered the zero-sum event?
+      placeholder: "e.g., I mistyped ALMSIVI as ALMSIVl, or I accidentally hit the semicolon key out of muscle memory."
+    validations:
+      required: true
+  - type: dropdown
+    id: error-message
+    attributes:
+      label: Which divine error message did the compiler emit just before the void reclaimed your data?
+      options:
+        - "Unrecognized cosmic script segment: Any symbols Not Alpha-Numeric or Decimal Numbers finding its way in the prose"
+        - "Compilation Error: Forgot to close a loop."
+        - "Mundus Runtime Error: Variable unalocated or out of bounds."
+        - "Zero-Sum: Attempted to divide by zero."
+        - "ERROR 404: RESDAYN NOT FOUND"
+        - "ERROR: THE SHAPE OF THE EGG (Mismatched vision sequences)"
+        - "None. The terminal fell dead silent and my cursor vanished."
+    validations:
+      required: true
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: The Oversight Committee Verification
+      options:
+        - label: "I have navigated to my local project directory and confirmed that the file is physically gone."
+          required: true
+        - label: "I have looked directly at Pascal's profile avatar and accepted their expression of cosmic indifference."
+          required: true
+        - label: "I promise that I am not using VS Code, an IDE, or an enterprise cloud recovery safety net."
+          required: true
+  - type: textarea
+    id: apology
+    attributes:
+      label: 📜 Final Words
+      description: Write a short, dramatic apology to the Tribunal and Pascal for bringing your flawed syntax into the Heart Chamber. If your apology is deemed sufficiently pathetic, you may be granted a spot on the Wall of Shame.
+    validations:
+      required: true
