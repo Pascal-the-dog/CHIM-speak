@@ -4,7 +4,7 @@
 
 CHIM-speak is a memory-safe, high-stakes, Turing-complete esoteric programming language written in pure Rust.
 
-What happens if you combine the strictness of the **Rust** compiler,  the verbose, dramatic readability of the **Shakespeare Programming Language (SPL)**’s proses and add in some Morrowind flavour?
+What happens if you combine the strictness of the **Rust** compiler,  the verbose, dramatic readability of **Shakespeare Programming Language (SPL)**’s proses and add in some Morrowind flavour?
 
 This. You get this.
 
