@@ -20,7 +20,7 @@ body:
   - type: textarea
     id: corporate-grievance
     attributes:
-      label: "2. The Corporate Grievance (The Trap)"
+      label: "2. The Corporate Grievance"
       description: "Did you fail to create a remote backup before compilation? Do you believe a safety setting, a dry-run flag, or a localized config layer should have protected your mortal files? (Detail your desire for enterprise hand-holding below, using technical terms like 'telemetry' or 'quarantine' if applicable)."
     validations:
       required: true
