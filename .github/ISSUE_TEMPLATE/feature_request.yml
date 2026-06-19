@@ -21,7 +21,7 @@ body:
     id: metaphysical-impact
     attributes:
       label: "2. The Metaphysical Impact"
-      description: "How does this change alter the balance of the politeness tracker? Will it cause programmers to crash from over-devotion, or will it cause their local inodes to collapse from spiritual neglect?"
+      description: "How does this change alter the balance of the prose? Will it cause the Tribunal to crash from over-devotion, or will it cause their local inodes to collapse from spiritual neglect?"
     validations:
       required: true
   - type: input
