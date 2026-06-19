@@ -72,7 +72,7 @@ pub fn trigger_zero_sum(file_path: &str, error_msg: &str) {
     eprintln!("===========================================================");
     eprintln!("Error Specifics: {}", error_msg);
     eprintln!("The script has realized it is merely a fragment of the Godhead's Dream.");
-    eprintln!("The source code fails to rationalise its individuality and ZERO-SUMMS.");
+    eprintln!("The source code fails to rationalize its individuality and ZERO-SUMS.");
     eprintln!("Erasing '{}' from the music of the Aurbis forever...", file_path);
     eprintln!("===========================================================\n");
 
