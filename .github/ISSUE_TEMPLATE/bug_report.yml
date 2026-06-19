@@ -2,7 +2,7 @@ name: Report a Flaw in the Mortal Plane (Bug Report)
 description: Report an issue where the reality of the compiler does not align with your expectations.
 title: "[HERESY]: "
 labels: ["ego-check-pending"]
-assignees: ["pascal_the_dog"]
+assignees: Pascal_the_dog
 body:
   - type: markdown
     attributes:
@@ -20,7 +20,7 @@ body:
   - type: textarea
     id: corporate-grievance
     attributes:
-      label: 2. The Corporate Grievance (The Trap)
+      label: 2. The Corporate Grievance
       description: Did you fail to create a remote backup before compilation? Do you believe a safety setting, a dry-run flag, or a localized config layer should have protected your mortal files?
       placeholder: "Detail your desire for enterprise hand-holding below, using technical terms like 'telemetry' or 'quarantine' if applicable."
     validations:

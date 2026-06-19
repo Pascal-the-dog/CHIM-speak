@@ -2,7 +2,7 @@ name: Theological Dispute (Lore/Feature Request)
 description: Propose changes to the internal laws of the Earth-Bones.
 title: "[SERMON]: "
 labels: ["tribunal-review"]
-assignees: ["pascal_the_dog"]
+assignees: Pascal_the_dog
 body:
   - type: markdown
     attributes:

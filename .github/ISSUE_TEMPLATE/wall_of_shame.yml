@@ -1,8 +1,8 @@
-name: "🛑 Report a Failed Ego-Check (Heresy Report)"
+name: "Report a Failed Ego-Check (Heresy Report)"
 description: Use this template if your file has vanished into the void and you want to be immortalized on the Wall of Shame.
 title: "[HERESY] I have failed the Wheel"
 labels: ["zero-summed", "divine-wrath"]
-assignees: ["pascal_the_dog"]
+assignees: Pascal_the_dog
 body:
   - type: markdown
     attributes:
