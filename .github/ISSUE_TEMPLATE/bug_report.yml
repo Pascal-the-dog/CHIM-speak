@@ -2,7 +2,8 @@ name: Report a Flaw in the Mortal Plane (Bug Report)
 description: Report an issue where the reality of the compiler does not align with your expectations.
 title: "[HERESY]: "
 labels: ["ego-check-pending"]
-assignees: Pascal_the_dog
+assignees:
+  - Pascal-the-dog
 body:
   - type: markdown
     attributes:
@@ -12,37 +13,35 @@ body:
   - type: textarea
     id: incident-description
     attributes:
-      label: 1. Describe the Incident
-      description: What text did you type, and how quickly did your source file dissolve into the void of your local file system?
-      placeholder: "I typed my code, hit enter, and heard a terrifying silence..."
+      label: "1. Describe the Incident"
+      description: "What text did you type, and how quickly did your source file dissolve into the void of your local file system?"
     validations:
       required: true
   - type: textarea
     id: corporate-grievance
     attributes:
-      label: 2. The Corporate Grievance
-      description: Did you fail to create a remote backup before compilation? Do you believe a safety setting, a dry-run flag, or a localized config layer should have protected your mortal files?
-      placeholder: "Detail your desire for enterprise hand-holding below, using technical terms like 'telemetry' or 'quarantine' if applicable."
+      label: "2. The Corporate Grievance (The Trap)"
+      description: "Did you fail to create a remote backup before compilation? Do you believe a safety setting, a dry-run flag, or a localized config layer should have protected your mortal files? (Detail your desire for enterprise hand-holding below, using technical terms like 'telemetry' or 'quarantine' if applicable)."
     validations:
       required: true
   - type: input
     id: os-details
     attributes:
-      label: Operating System
+      label: "Operating System"
       placeholder: "e.g., Windows 11 Enterprise, TempleOS"
     validations:
       required: true
   - type: input
     id: editor-details
     attributes:
-      label: Code Interface Editor
+      label: "Code Interface Editor"
       placeholder: "If it is not unconfigured Kate or Nano, the Tribunal already judges you harshly."
     validations:
       required: true
   - type: input
     id: remote-url
     attributes:
-      label: Git Remote Origin URL
+      label: "Git Remote Origin URL"
       placeholder: "If blank, your file is gone forever."
     validations:
       required: true
