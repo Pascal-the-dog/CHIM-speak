@@ -38,7 +38,7 @@ During early development, the compiler's `trigger_zero_sum()` function accidenta
 
 1. **Pure Alpha-Numeric Only:** Absolutely no symbols (`[`, `]`, `+`, `-`, `;`, etc.) are permitted. Punctuation upsets the Tribunal.
 2. **Raw Digit Logic:** Numeric evaluations and loop parameters must be written as raw digits (`3`, `5`, `100`). Word variants are heretical.
-3. **Theatrical Execution:** Memory operations mimic SPL. Variables are treated as entities interacting within "Houses" or "Planes of Oblivion" governed by algebraic equations.
+3. **Theatrical Execution:** Memory operations mimic SPL. Variables are treated as entities interacting among themselves while being governed by algebraic equations.
 
 ### 1. Loop Orchestration
 
