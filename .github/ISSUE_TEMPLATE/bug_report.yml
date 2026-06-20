@@ -44,4 +44,4 @@ body:
       label: "Git Remote Origin URL"
       placeholder: "If blank, your file is gone forever."
     validations:
-      required: true
+      required: false
