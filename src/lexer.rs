@@ -1,6 +1,6 @@
 #[derive(Debug, Clone, PartialEq)]
 pub enum Token {
-    // ... loop tokens remain unchanged ...
+    // ... loop tokens ...
     WheelTurns,
     FromFirstDawn,
     UntilMiddleDawn(i64),
