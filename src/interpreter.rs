@@ -87,7 +87,6 @@ impl Interpreter {
             ASTNode::WhileLoop { var_name, body } => {
                 while *env.variables.get(var_name).unwrap_or(&0) > 0 {
                     for stmt in body {
-                        // Add file_path here to fix the 4-argument requirement:
                         self.execute_stmt(stmt, cycle, env, file_path);
                     }
                 }
