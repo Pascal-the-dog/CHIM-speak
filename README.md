@@ -4,7 +4,7 @@
 
 CHIM-speak is a memory-safe, high-stakes, Turing-complete esoteric programming language written in pure Rust.
 
-What happens if you combine the strictness of the **Rust** compiler,  the verbose, dramatic readability of **Shakespeare Programming Language (SPL)**’s proses and add in some Morrowind flavour?
+What happens if you combine the strictness of the **Rust** compiler with the verbose, dramatic readability of **Shakespeare Programming Language (SPL)**’s prose, and then add in some Morrowind flavour?
 
 This. You get this.
 
@@ -18,7 +18,7 @@ Unlike modern languages that coddle you with "warnings" or "syntax suggestions,"
 
 ### 💀 The Zero-Sum Feature
 
-The compiler and runtime engine are written in pure Rust for maximum execution speed and safety. However, the pipeline is entirely unforgiving. If the lexer encounters an unrecognized character sequence, if the parser catches a structural loop misalignment, or if the interpreter hits a runtime trap (like a variable that doesn't exist or division by zero), the script will immediately realize the fictional nature of its own existence.
+The compiler and runtime engine are written in pure Rust for maximum execution speed and safety. However, the pipeline is entirely unforgiving. If the lexer encounters an unrecognized character sequence, if the parser catches a structural loop misalignment, or if the interpreter hits a runtime trap (like a variable that does not exist or a division by zero), the script will immediately realize the fictional nature of its own existence.
 
 It will panic, fail its ego-check, and **instantly zero-sum (permanently delete itself from your hard drive)** via `std::fs::remove_file`.
 
@@ -26,7 +26,7 @@ It will panic, fail its ego-check, and **instantly zero-sum (permanently delete 
 
 ### 📝 The Scribe's Trial (How This Was Forged)
 
-The developer did not write this compiler from the safety of an IDE. Every line of the compiler, the lexer, and the initial test suites was written using an unconfigured, bare-bones version of the **Kate** text editor, and executed directly out of the terminal. The target source files themselves were composed straight over the the terminal stream via **`nano`**.
+The developer did not write this compiler from the safety of an IDE. Every line of the compiler, the lexer, and the initial test suites was written using an unconfigured, bare-bones version of the **Kate** text editor, and executed directly out of the terminal. The target source files themselves were composed straight over the terminal stream via **`nano`**.
 
 No local history backups. No auto-save recovery nets. No LSP hand-holding.
 
@@ -36,9 +36,9 @@ During early development, the compiler's `trigger_zero_sum()` function accidenta
 
 ## 📜 Syntax Rules
 
-1. **Pure Alpha-Numeric Only:** Absolutely no symbols (`[`, `]`, `+`, `-`, `;`, etc.) are permitted. Punctuation upsets the Tribunal.
+1. **Pure Alphanumeric Only:** Absolutely no symbols (`[`, `]`, `+`, `-`, `;`, etc.) are permitted. Punctuation upsets the Tribunal.
 2. **Raw Digit Logic:** Numeric evaluations and loop parameters must be written as raw digits (`3`, `5`, `100`). Word variants are heretical.
-3. **Theatrical Execution:** Memory operations mimic SPL. Variables are treated as entities interacting among themselves while being governed by algebraic equations.
+3. **Theatrical Execution:** Memory operations mimic SPL. Variables are treated as entities interacting among themselves while being governed strictly by algebraic equations.
 
 ### 1. Loop Orchestration
 
@@ -146,13 +146,13 @@ If your code zero-sums on your local machine, do not bother opening a GitHub Iss
 
 All external repository communications are strictly managed by **Pascal**, the Creator's familiar and official GitHub Secretary under the pseudonym `pascal_the_dog`. Pascal reviews all repository traffic with an expression of absolute cosmic indifference. Any attempts to report a bug regarding the `trigger_zero_sum()` protocol will be intercepted by Pascal, evaluated with deadpan silence, and filed directly into the digital void. He will not reply.
 
-If for any reasons contributing to this repos becomes appealing for any reasons, you will first need to read Contributing.md and respect the pull requests, bug reports, or contribution templates, our peppy secretary **Pascal** will gladly responds to any inquiries from Outlanders. 
+If for any reasons contributing to this repo becomes appealing, you will first need to read Contributing.md and respect the pull requests, bug reports, or contribution templates, our peppy secretary **Pascal** will gladly responds to any inquiries from Outlanders. 
 
 ---
 
 ## 🧱 The Wall of Shame (The Severed Threads)
 
-Below lies the eternal record of scribes who looked into the wheel, blinked, and allowed their source code to be entirely zero-summed. Their files have vanished into the void, and their names are recorded here for the amusement of the Tribunal.
+Below lies the eternal record of scribes who looked into the Wheel, blinked, and allowed their source code to be entirely zero-summed. Their files have vanished into the void, and their names are recorded here for the amusement of the Tribunal.
 
 | Scribe | Offending Code / Typo | Divine Judgment Meted Out |
 | :--- | :--- | :--- |

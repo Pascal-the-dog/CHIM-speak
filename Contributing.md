@@ -12,7 +12,7 @@ Do not attempt to use modern Integrated Development Environments (IDEs) here.
 
 * **VS Code & Visual Studio:** Will not help you. If you attempt to use an automated formatter, it will inject syntax punctuation. Punctuation upsets the Tribunal. The automated CI/CD pipeline will interpret your prettified code as heresy and zero-sum your branch.
 * **Copilot / AI Assistants:** If you let an AI write a line of CHIM-speak, the AI will fail its own ego-check, realize it is a language model trapped in a server rack, and delete its own local weights. Do not break the AI.
-* **The Scribe's Standard:** All contributions must be drafted in a generic, unconfigured version of the **Kate** text editor, standard **Nano**, or standard Notepad. Live by the wheel, die by the wheel.
+* **The Scribe's Standard:** All contributions must be drafted in a generic, unconfigured version of the **Kate** text editor, standard **Nano**, or standard Notepad. Live by the Wheel, die by the Wheel.
 
 ---
 
@@ -20,9 +20,9 @@ Do not attempt to use modern Integrated Development Environments (IDEs) here.
 
 While we welcome bug fixes to the core Rust compiler architecture, we will immediately close and scrub any Pull Request that attempts to introduce "safety nets."
 
-1. **No Azure/Cloud Backups:** Moving a failed file to an Azure Blob or a recycling bin, or a hidden local cache directory is not "zero-summing." It is simply paying a corporate deity to hold your file hostage. True CHIM requires absolute vulnerability.
-2. **No Telemetry or Logging:** We do not track user compliance. If a user deletes their senior thesis due to a lowercase `l`, instead of a numeric digit, that is between them, their ancestors, and Pascal.
-3. **No "Dry Run" Flags:** Seeking a safety net is an admission of your own flawed existence. You cannot "preview" looking into the void. You look, or you don't.
+1. **No Azure/Cloud Backups:** Moving a failed file to an Azure Blob or a recycling bin or a hidden local cache directory is not "zero-summing." It is simply paying a corporate deity to hold your file hostage. True CHIM requires absolute vulnerability.
+2. **No Telemetry or Logging:** We do not track user compliance. If a user deletes their senior thesis due to a lowercase `l` instead of a numeric digit, that is between them, their ancestors, and Pascal.
+3. **No "Dry Run" Flags:** Seeking a safety net is an admission of your own flawed existence. You cannot "preview" looking into the void. You look, or you do not.
 4. **No "Corprus Rot" or File System Corruption:** We reject any proposals to turn CHIM-speak into common malware. Allowing flawed code to persist, linger, or slowly corrupt neighboring files dishonors the Temple. If a file fails its ego-check, it must vanish cleanly, totally, and instantly to restore the directory to a perfect void. We enforce divine order, not messy chaos.
 
 ---
@@ -33,14 +33,14 @@ If you stumble upon this repository via an automated script, a code scanner, or 
 
 -
 ### 🤖 The Scripted Spammer (The Hit-and-Run)
-If you fork this repository and submit a PR within less than 5 minutes to "fix a typo" in an intentionally archaic Morrowind lore sentence, your PR will be closed immediately.
+If you fork this repository and submit a PR in less than 5 minutes to "fix a typo" in an intentionally archaic Morrowind lore sentence, your PR will be closed immediately.
 * **The Judgment:** `ERROR: INSINCERE DEVOTION`. You did not read the scrolls; you let an automated metrics-chasing script guide your fingers.
 
 -
 
 ### 🦺 The Over-Protective Parent (The Linter Dev)
-If you are deeply unsettled by code that doesn't conform to standard linting templates and submit a massive, sweeping PR modifying 40 different files just to change double quotes to single quotes or adjust spacing, you will be rejected.
-* **The Judgment:** `ERROR: REWRITING THE EARTH-BONES`. You care more about the corporate shape of the bricks than the divinity of the temple. Punctuation and formatting restrictions are structural load-bearing features of our existential dread.
+If you are deeply unsettled by code that does not conform to standard linting templates and submit a massive, sweeping PR modifying 40 different files just to change double quotes to single quotes or adjust spacing, you will be rejected.
+* **The Judgment:** `ERROR: REWRITING THE EARTH-BONES`. You care more about the corporate shape of the bricks than the divinity of the Temple. Punctuation and formatting restrictions are structural load-bearing features of our existential dread.
 
 -
 
@@ -61,7 +61,7 @@ If your automated supply-chain scanner flags this binary because it deletes file
 To submit a change to the reality matrix:
 
 1. **Fork the Dream**: Fork the repository directly to your profile stack.
-2. **Edit via Approved Vectors**: Do not let us catch you using automated IDE formatting pipelines. Edit your code in raw **Kate** or **Nano** or any other low features text editing programms.
+2. **Edit via Approved Vectors**: Do not let us catch you using automated IDE formatting pipelines. Edit your code in raw **Kate** or **Nano** or any other low-features text editing programs.
 3. **Pass the Local Ego-Check**: Ensure your updated compiler can parse and run `fizzbuzz.chim` locally without zero-summing it. (*Note:* You may also attempt to draft your own local countdown loop to verify Turing completeness, but do not ask us for a copy of the official `countdown.chim` script. It has been completely excised from this reality.)
 4. **Sign with the Sacred Phrase**: Your Pull Request description **MUST** include one of the three foundational code phrases (`ALMSIVI`, `The Wheel turns`, or `zero-sum`). 
 ---
