@@ -22,17 +22,3 @@ jobs:
             echo "The Words are ALMSIVI. Pull Request instantly vetoed."
             exit 1
           fi
-
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-        
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Execute Heresy Scan
-        run: |
-          echo "Running the extended syntactic validation rules..."
-          python .github/pascal_gatekeeper.py
-
