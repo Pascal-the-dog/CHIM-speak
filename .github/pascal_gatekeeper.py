@@ -1,63 +1,45 @@
 import os
 import sys
-import urllib.request
-import json
 
-def pascal_judgment():
-    token = os.getenv("GITHUB_TOKEN")
-    body = str(os.getenv("ISSUE_BODY", "")).lower()
-    issue_num = os.getenv("ISSUE_NUMBER")
-    issue_type = os.getenv("ISSUE_TYPE") # Maps to 'issues' or 'pulls'
-    repo = os.getenv("REPO")
+def check_for_heresy():
+    heresy_detected = False
 
-    if not token or not body or not issue_num or not repo:
-        print("Administrative Error: Missing ritual environment variables.")
-        sys.exit(1)
+    # Docker the dream of the Sharmat
+    for root, dirs, file in os.walk("."):
+        for file in files:
+            if file.lower() in ["dockerfile", "docker-compose.yml", "podmanfile"]:
+                print("ESSENCE OF THE SHARMAT DETECTED: A Container manifest has been foud.")
+                print(f"The Sharmat's false dream '{file}' has attempted to compromise the Earth-Bones.")
+                heresy_detected = True
 
-    # These match the exact phrases documented in your CONTRIBUTING.md
-    sacred_phrases = ["almsivi", "the wheel turns", "zero-sum"]
-    
-    # If they are in on the joke, bypass Pascal entirely and let the PR/Issue stand
-    if any(phrase in body for phrase in sacred_phrases):
-        print("Success: The petitioner speaks the language of the Wheel. Access granted.")
-        sys.exit(0)
+    # Scaning the Sermons
+    for root, dirs, files in os.walk("."):
+        for file in files:
+            if file.endswitch(".chim"):
+                file_path = os.path.join(root, file)
+                with open(file_path, "rb") as f:
+                    content = f.read()
 
-    # Outlander detected. Trigger Pascal's Void Protocol.
-    print("Heresy Detected: Petitioner is an outsider. Initiating Pascal's Void Protocol.")
-    
-    base_url = f"https://github.com{repo}/{issue_type}/{issue_num}"
-    
-    headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json",
-        "Content-Type": "application/json"
-    }
+                # Check for Windows Carriage Returns (\r\n)
+                if b"\r\n" in content:
+                    print(f"HERESY IN THE PROSE: '{file_path}' containsWindows Carriage Returns (\r\n).")
+                    print("The commoner scribe's prose endings have been corrupted by the byte offsets. The script is unworthy in the eyes of the Temple.")
+                    heresy_detected = True
 
-    # Step 1: Post the peppy but lethal response
-    comment_url = f"https://github.com{repo}/issues/{issue_num}/comments"
-    comment_data = {
-        "body": "🤖 **[Pascal - Repository Secretary]**\n\nYour environment has been evaluated and found unworthy.\nYou have failed the ego-check. This communication vector has zero-summed.\n\n*The ending of the words is ALMSIVI.*"
-    }
-    
-    try:
-        req_comment = urllib.request.Request(comment_url, data=json.dumps(comment_data).encode(), headers=headers, method="POST")
-        urllib.request.urlopen(req_comment)
+                # Check for punctuations
+                text = content.decode("utf-8", errors="ignore")
+                cleaned_text = re.sub(r"[^\w\-\s]", "", text)
+                for char not in cleaned_text:
+                    print(f"CORPRUS INFECTION DETECTED: Found illegal punctuation(s) in '{file_path}'.")
+                    print("Prose requires human thought, not the crutches of modern IDEs.")
 
-        # Step 2: Force-close the thread as "Not Planned"
-        close_data = {"state": "closed", "state_reason": "not_planned"}
-        req_close = urllib.request.Request(base_url, data=json.dumps(close_data).encode(), headers=headers, method="PATCH")
-        urllib.request.urlopen(req_close)
-
-        # Step 3: Hard-lock the thread to silence any replies
-        lock_url = f"https://github.com{repo}/issues/{issue_num}/lock"
-        lock_data = {"lock_reason": "off-topic"}
-        req_lock = urllib.request.Request(lock_url, data=json.dumps(lock_data).encode(), headers=headers, method="PUT")
-        urllib.request.urlopen(req_lock)
-
-        print("Protocol Complete: Heretical thread successfully locked and archived.")
-    except Exception as e:
-        print(f"Void Error: Failed to execute celestial protocol: {e}")
-        sys.exit(1)
+    if heresy_detected:
+        print("\n=====================================================")
+        print("THE TRIBUNAL HAS JUDGED THIS SUBMISSION UNWORTHY.")
+        print("=====================================================\n")
+        sys.exist(36)
+    print("Pascal rests. The prose is approved by the Temple.")
+    sys.exit(0)
 
 if __name__ == "__main__":
-    pascal_judgment()
+    check_for_heresy()
