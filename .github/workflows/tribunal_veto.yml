@@ -5,17 +5,34 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  ego_check:
-    name: "⚖️ The Scribe's Ego-Check"
+  tribunal_judgment:
+    name: "⚖️ The Tribunal's Judgment"
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
 
-      - name: Setup Python
+    steps:
+      - name: Evaluate Petitioner Identity
+        env:
+          PR_ACTOR: ${{ github.actor }}
+        run: |
+          echo "Evaluating the identity of the petitioner..."
+          if [ "$PR_ACTOR" = "pascal_the_dog" ]; then
+            echo "✨ Identity verified. Welcome back, Creator."
+          else
+            echo "❌ CRITICAL HERESY DETECTED: The user '$PR_ACTOR' is an imposter!"
+            echo "The Words are ALMSIVI. Pull Request instantly vetoed."
+            exit 1
+          fi
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Run Heresy Check
-        run: Python .github/pascal_gatekeeper.py
+      - name: Execute Heresy Scan
+        run: |
+          echo "Running the extended syntactic validation rules..."
+          python .github/pascal_gatekeeper.py
+
