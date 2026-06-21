@@ -1,0 +1,2 @@
+# Protect the sacred prose from Windows line ending heresy
+*.chim text eol=lf
