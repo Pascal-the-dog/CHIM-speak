@@ -32,12 +32,12 @@ def check_for_heresy():
                 
                 # Finds all characters that are NOT letters, numbers, spaces, or hyphens
                 illegal_chars = re.findall(r"[^a-zA-Z0-9\s-]", text)
-                
                 if illegal_chars:
                     print(f"CORPRUS INFECTION DETECTED: Found illegal punctuation(s) {set(illegal_chars)} in '{file_path}'.")
                     print("Prose requires human thought, not the crutches of modern IDEs.")
                     heresy_detected = True
 
+    
 
     if heresy_detected:
         print("\n=====================================================")
