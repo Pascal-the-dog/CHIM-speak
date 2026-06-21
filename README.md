@@ -162,7 +162,7 @@ Below lies the eternal record of scribes who looked into the Wheel, blinked, and
 ### 🕯️ How to Submit Your Failure
 If you have failed the ego-check and your file is gone, do not weep. Open a GitHub Issue titled `[HERESY] I have failed the Wheel` and include:
 1. The exact typo that cost you your source file.
-2. A screenshot of your empty folder.
+2. A screenshot of you empty folder or a direct verification that your file has been zero-summed.
 3. A formal apology to Pascal.
 
 ---
