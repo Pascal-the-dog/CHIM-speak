@@ -1,11 +1,12 @@
 import os
 import sys
+import re
 
 def check_for_heresy():
     heresy_detected = False
 
     # Docker the dream of the Sharmat
-    for root, dirs, file in os.walk("."):
+    for root, _, files in os.walk("."):
         for file in files:
             if file.lower() in ["dockerfile", "docker-compose.yml", "podmanfile"]:
                 print("ESSENCE OF THE SHARMAT DETECTED: A Container manifest has been foud.")
@@ -13,9 +14,9 @@ def check_for_heresy():
                 heresy_detected = True
 
     # Scaning the Sermons
-    for root, dirs, files in os.walk("."):
+    for root, _, files in os.walk("."):
         for file in files:
-            if file.endswitch(".chim"):
+            if file.endswith(".chim"):
                 file_path = os.path.join(root, file)
                 with open(file_path, "rb") as f:
                     content = f.read()
@@ -37,7 +38,7 @@ def check_for_heresy():
         print("\n=====================================================")
         print("THE TRIBUNAL HAS JUDGED THIS SUBMISSION UNWORTHY.")
         print("=====================================================\n")
-        sys.exist(36)
+        sys.exit(36)
     print("Pascal rests. The prose is approved by the Temple.")
     sys.exit(0)
 
