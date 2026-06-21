@@ -1,0 +1,72 @@
+name: Pascal's Theological Audit
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  audit_sermon:
+    name: "🔱 Auditing New Revelations"
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    if: contains(github.event.issue.labels.*.name, 'tribunal-review')
+
+    steps:
+      - name: Evaluate Pass-phrase and Respond
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const petitioner = context.payload.issue.user.login;
+            const issueBody = context.payload.issue.body || "";
+
+            const hasSacredWord = /### 3\. The Ending of the Words\s+([\s\S]*?)(?:###|$)/i.test(issueBody) && 
+                                  issueBody.match(/### 3\. The Ending of the Words\s+([\s\S]*?)(?:###|$)/i)[1].includes("ALMSIVI");
+
+            if (hasSacredWord) {
+              // Pass-phrase is correct. Keep open.
+              const acceptedMessage = [
+                `🔱 **The Tribunal acknowledges your revelation, scribe @${petitioner}.**`,
+                "",
+                "The sacred pass-phrase matches. Your prose proposal has been indexed into the archive.",
+                "Your dispute will remain **pending review** by the Boyant Armigers.",
+                "",
+                "**@Pascal-the-dog** will judge the metaphysical impact when the moons align."
+              ].join('\n');
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: acceptedMessage
+              });
+
+            } else {
+              // Pass-phrase is wrong or missing. Close instantly.
+              const rejectedMessage = [
+                `❌ **HERETICAL BLASPHEMY DETECTED, @${petitioner}!**`,
+                "",
+                "You have attempted to rewrite the internal laws of the Earth-Bones without declaring the true closing of the words.",
+                "Your mind is weak, your memory is short, and your devotion is absent.",
+                "",
+                "**This theological dispute has been strike-closed from reality.**",
+                "",
+                "The ending of the words is ALMSIVI."
+              ].join('\n');
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: rejectedMessage
+              });
+
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                state: 'closed',
+                state_reason: 'not_planned'
+              });
+            }
