@@ -22,17 +22,22 @@ def check_for_heresy():
                     content = f.read()
 
                 # Check for Windows Carriage Returns (\r\n)
-                if b"\r\n" in content:
+                if "\r\n" in content:
                     print(f"HERESY IN THE PROSE: '{file_path}' containsWindows Carriage Returns (\r\n).")
                     print("The commoner scribe's prose endings have been corrupted by the byte offsets. The script is unworthy in the eyes of the Temple.")
                     heresy_detected = True
 
-                # Check for punctuations
+                                # Decode and search for forbidden punctuation
                 text = content.decode("utf-8", errors="ignore")
-                cleaned_text = re.sub(r"[^\w\-\s]", "", text)
-                for char not in cleaned_text:
-                    print(f"CORPRUS INFECTION DETECTED: Found illegal punctuation(s) in '{file_path}'.")
+                
+                # Finds all characters that are NOT letters, numbers, spaces, or hyphens
+                illegal_chars = re.findall(r"[^a-zA-Z0-9\s-]", text)
+                
+                if illegal_chars:
+                    print(f"CORPRUS INFECTION DETECTED: Found illegal punctuation(s) {set(illegal_chars)} in '{file_path}'.")
                     print("Prose requires human thought, not the crutches of modern IDEs.")
+                    heresy_detected = True
+
 
     if heresy_detected:
         print("\n=====================================================")
