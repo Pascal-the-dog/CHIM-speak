@@ -1,0 +1,54 @@
+name: Pascal's Automated Solace
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  pascal_speaks:
+    name: "💀 Processing Corporate Grievance"
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    if: contains(github.event.issue.labels.*.name, 'ego-check-pending')
+
+    steps:
+      - name: Formulate Verdict and Close Issue
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const petitioner = context.payload.issue.user.login;
+            
+            const message = [
+              `**Pascal acknowledges your existential failure, Petitioner @${petitioner}.**`,
+              "",
+              "> _'Did you fail to create a remote backup before compilation? Do you believe a safety setting should have protected your mortal files?'_",
+              "",
+              "The Tribunal has reviewed your plea for enterprise hand-holding and telemetry. We have looked into the void of your local file system, and we found no solace.",
+              "",
+              "### ⚖️ Final Judgment:",
+              "1. If your file dissolved, it did so by the absolute law of the Earth-Bones. There is no quarantine.",
+              "2. If you are using an IDE with modern crutches, your Corprus infection was self-inflicted.",
+              "",
+              "**Your files are gone, your ego has been audited, and this thread is permanently zero-summed.**",
+              "",
+              "The ending of the words is ALMSIVI."
+            ].join('\n');
+
+            // 1. Post the final verdict comment
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: message
+            });
+
+            // 2. Instantly close the issue as "not_planned" (the ultimate dismissal)
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+              state_reason: 'not_planned'
+            });
