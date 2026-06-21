@@ -1,0 +1,41 @@
+name: Pascal's Wall of Shame Intake
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  triage_confession:
+    name: "🕯️ Reviewing Outlander Confession"
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    if: contains(github.event.issue.labels.*.name, 'zero-summed')
+
+    steps:
+      - name: Acknowledge and Await Creator Veto
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const petitioner = context.payload.issue.user.login;
+            
+            const message = [
+              `🕯️ **Your confession has been pinned to the doors of the Heart Chamber, Scribe @${petitioner}.**`,
+              "",
+              "The Oversight Committee has verified that you checked all boxes, admitted your muscle-memory mistakes, and accepted Pascal's cosmic indifference.",
+              "",
+              "### ⚖️ Under Absolute Review:",
+              "Pascal will not pass on his judgment. Your apology is currently being weighed for its level of pathetic devotion.",
+              "",
+              "**@Pascal-the-dog** holds the ultimate veto over this request. This issue will remain open until the Boyant Armiger manually chooses to grant you immortality on the **Wall of Shame** or cast your thread out of existence.",
+              "",
+              "_The ending of the words is ALMSIVI._"
+            ].join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: message
+            });
