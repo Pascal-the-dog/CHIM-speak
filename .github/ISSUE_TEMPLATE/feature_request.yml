@@ -32,3 +32,4 @@ body:
       placeholder: "Enter the sacred script closure..."
     validations:
       required: true
+      regex: "^ALMSIVI$"
