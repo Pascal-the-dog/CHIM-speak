@@ -34,25 +34,25 @@ If you stumble upon this repository via an automated script, a code scanner, or 
 -
 ### 🤖 The Scripted Spammer (The Hit-and-Run)
 If you fork this repository and submit a PR in less than 5 minutes to "fix a typo" in an intentionally archaic Morrowind lore sentence, your PR will be closed immediately.
-* **The Judgment:** `ERROR: INSINCERE DEVOTION`. You did not read the scrolls; you let an automated metrics-chasing script guide your fingers.
+* **The Judgment:** `VERDICT: INSINCERE DEVOTION`. You did not read the scrolls; you let an automated metrics-chasing script guide your fingers.
 
 -
 
 ### 🦺 The Over-Protective Parent (The Linter Dev)
 If you are deeply unsettled by code that does not conform to standard linting templates and submit a massive, sweeping PR modifying 40 different files just to change double quotes to single quotes or adjust spacing, you will be rejected.
-* **The Judgment:** `ERROR: REWRITING THE EARTH-BONES`. You care more about the corporate shape of the bricks than the divinity of the Temple. Punctuation and formatting restrictions are structural load-bearing features of our existential dread.
+* **The Judgment:** `VERDICT: REWRITING THE EARTH-BONES`. You care more about the corporate shape of the bricks than the divinity of the Temple. Punctuation and formatting restrictions are structural load-bearing features of our existential dread.
 
 -
 
 ### 📋 The Template Bureaucrat (The Vibe-Check Failure)
 If you open a GitHub Issue using our "Heresy Report" template but fill it out with dry, corporate-speak explaining why `std::fs::remove_file` is an "inefficient way to handle parser errors," your issue will be locked.
-* **The Judgment:** `ERROR: LACK OF VISION`. Explaining the mechanical inefficiency of zero-summing completely misses the psychological comedy of the architecture.
+* **The Judgment:** `VERDICT: LACK OF VISION`. Explaining the mechanical inefficiency of zero-summing completely misses the psychological comedy of the architecture.
 
 -
 
 ### 🛡️ The Confused Security Researcher
 If your automated supply-chain scanner flags this binary because it deletes files on an error branch, do not open a Private Security Advisory regarding an "Arbitrary File Deletion Vulnerability."
-* **The Judgment:** `ERROR: CONTRADICTION WITH THE VISION!` It is not a vulnerability if it is the explicitly advertised primary feature. You cannot report the void for being empty.
+* **The Judgment:** `VERDICT: CONTRADICTION WITH THE VISION!` It is not a vulnerability if it is the explicitly advertised primary feature. You cannot report the void for being empty.
 
 ---
 
